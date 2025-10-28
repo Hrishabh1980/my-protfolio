@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header{
+             display: grid;
+             grid-template-columns:2.4fr 0.1fr;
+           
+            font-size:larger;
+            padding-top: 10px;
+            position: fixed;
+            position: sticky;
+            background-color: rgba(19, 100, 181, 0.622);
+            padding: 13px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 23px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(0, 0, 0);
+        
+            position: sticky;
+            top: 10px;
+        
+        } 
+        header:hover{
+            background-color: rgb(17, 100, 224);
+            color: black;
+            box-shadow: 10px 10px 5px grey;
+            transform: scale(1.02);
+
+        }  
+        span{
+            justify-content: space-between;
+            padding-left: 10px;
+            align-items: center;
+            color: #000;
+            font-size: 30px;
+        }
+        details{
+            margin-right: 20px;
+            width: 220px;
+            font-size: 25px;
+            text-align: center;
+            cursor: pointer;
+            height: 20px;
+            border: 1 px  solid black;
+            border-radius: 5px; 
+            
+            
+        }
+        summary{
+           background: #dadada;
+             text-align: right;
+             list-style: none;
+             padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+
+        }
+        details:not([open])  {
+            width: 100px;;
+        }
+        .NAME{
+            color: rgb(65, 63, 63);
+            font-weight: bold;
+        }
+        article div{
+            background-color: rgba(53, 120, 186, 0.456);
+            font-size: larger;
+            padding: 50px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+            
+        }
+        article div button{
+            width: 150px;
+            height: 40px;
+            margin: 20px;
+            font-size: large;
+            border-radius: 10px;
+            border: none;   
+            background-color: rgb(63, 64, 65);
+            color: white;
+            cursor: pointer;
+            font-style: italic;
+        }
+        article div button:hover{
+            background-color: rgb(17, 100, 224);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        button a{
+            text-decoration: none;
+            color: white;
+        }
+        section{
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(53, 120, 186, 0.456);
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+            display: flex;
+            
+            justify-content: space-between;
+            align-items: right;
+            gap:70px;
+          
+        }
+        h2{
+            text-align: center;
+            font-size: 40px;
+            background-color:  #5394d2a6;;
+        }  
+        button.about1{
+            background-color: rgba(226, 104, 28, 0.681);
+            border: 1px solid black;
+            border-radius: 2pc;
+            
+          
+        }
+        button.about1:hover{
+            background-color: rgba(226, 78, 28, 0.681);
+            
+
+
+        }
+        button.about2{
+            background-color: rgba(28, 226, 161, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about2:hover{
+            background-color: rgba(28, 206, 161, 0.681);
+        }
+        button.about3{
+            background-color: rgba(28, 161, 226, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about3:hover{
+            background-color: rgba(28, 141, 226, 0.681);
+        }
+        button.about4{
+            background-color: rgba(226, 28, 161, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about4:hover{
+            background-color: rgba(226, 28, 141, 0.681);
+        }
+        button.about5{  
+            background-color: rgba(161, 28, 226, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about5:hover{
+            background-color: rgba(141, 28, 226, 0.681);
+        }
+        button.about6{
+            background-color: rgba(226, 161, 28, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about6:hover{    
+            background-color: rgba(226, 141, 28, 0.681);
+        }
+        button.about7{
+            background-color: rgba(28, 226, 88, 0.681);
+             border: 1px solid black;
+            border-radius: 2pc;
+        }
+        button.about7:hover{
+            background-color: rgba(28, 206, 88, 0.681);
+        }
+        .photo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo:hover{
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        article.technical-skills div p{
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        article.technical-skills div nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap:50px;
+        }
+        ul h2{
+            text-align: center;
+            margin-bottom: 10px;
+            
+            
+        }
+        ul li{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        progress{
+            width: 200px;
+            height: 15px;
+           
+        }
+        ul{
+            list-style-type: none;
+        }
+        iframe{
+        width: 1000px;
+        height: 700px;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px grey;
+         transition: all 0.3s ease;
+        cursor: pointer;
+    }  
+    iframe:hover{
+        transform: scale(1.08);
+        box-shadow: 10px 10px 5px grey;
+        border: 2px solid black;
+    }  
+    section.projects{
+        margin-top: 50px;
+        padding: 20px;
+        background-color: rgba(53, 120, 186, 0.456);
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+        display: flex;
+        
+        justify-content: space-between;
+        align-items: right;
+        gap:70px;
+      
+    }
+    section.projects div ul{
+        font-size: 25px;
+       
+    }
+    section.projects div ul li{
+        border: 1px solid black;
+        width: 150px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: rgba(57, 106, 191, 0.471);
+        transition: all 0.3s ease;
+        cursor: pointer;
+       
+    }
+     li:hover{
+        background-color: rgba(76, 124, 187, 0.842);  
+        color: black;
+        transform: scale(1.1);
+        box-shadow: 10px 10px 5px rgb(70, 103, 160);
+    }
+        
+       form{
+            background-color: rgb(47, 106, 184);
+            width: 300px;
+            height: 400px;
+            margin-left: 40%;
+            margin-top: 5%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px rgb(70, 109, 176);
+        }
+        form:hover{
+            box-shadow: 10px 10px 5px black;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        textarea{
+            width: 250px;
+            height: 100px;
+            border-radius: 5px;
+            border:1px solid grey;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        textarea:hover{
+            box-shadow: 5px 5px 5px grey;
+            transform: scale(1.02); 
+            transition: all 0.3s ease;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            border:none;
+            background-color: rgb(63, 63, 73);
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            border:1px solid grey;
+            padding-left: 10px;
+        }
+        section.contact-me {
+            font-size: 20px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+        }
+         footer{
+            background-color: rgba(99, 157, 207, 0.864);
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr ;
+
+        }
+        footer div h2{
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        nav.link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        nav.link:hover{
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        nav.connect{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1px;
+        }
+        nav.connect:hover{
+            transform:skew(5deg);
+            transition: all 0.9s ease;
+        }
+         .footer-bottom {
+            grid-column: span 3;
+            padding-top: 1rem;
+            opacity: 0.8;
+            text-align: center;
+            font-size: 20px; 
+            background-color: rgba(81, 82, 83, 0.864);
+
+
+        }   
+        nav.ME{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+
+   
+    
+
+
+      
+       
+  
+
+           
+        
+      
+       
+    </style>
+</head>
+<body style="background-color: #5394d2a6;">
+    <header>
+        <div>
+            <nav>
+                <span style="color: #000;"> Hrishabh </span> <span style="color: aliceblue;" > singh</span>
+
+            
+            </nav>
+             </div>
+           
+             <details>
+                <summary>
+                    &#9776; 
+                </summary>
+
+
+    
+               <ul>
+            <li><a href="#home" style="color: rgb(0, 0, 0);">Home</a></li>
+            <li><a href="#about" style="color: rgb(3, 3, 3);">About</a></li>
+            <li><a href="#skills" style="color: rgb(0, 0, 0);">Skills</a></li>
+            <li><a href="#projects" style="color: rgb(9, 10, 10);">Projects</a></li>
+             <li><a href="#contact" style="color: rgb(0, 0, 0);">Contact</a></li>
+                </ul>
+        
+    </div>
+    </details>
+    <br>
+ </header>
+  <article id =home>
+    <div>
+
+
+                   <h1 >  Hi, I'm <span CLASS=NAME>Hrishabh Singh</span></h1>
+
+                
+                  <p >
+                    BTech Student at PW IOI Lucknow Campus
+                </p>
+                <p >
+                    Passionate about technology and innovation, building projects that solve real-world problems
+                </p>
+                <div>
+                  <button>
+                     <a href="#projects"  >
+                        View My Work
+                     </a>
+                    </button>
+                    <button>
+                     <a href="#contact" >
+                        Get In Touch
+                     </a>
+                    </button>
+                </div>
+            </div>
+   </article>
+   <article class=" about-me">
+
+   <h2>About Me</h2>
+   </article>
+    <section id="about">
+        
+        
+        <section class="photo">
+        
+         <div>
+         <nav>
+            <img src="./WhatsApp Image 2025-09-13 at 01.17.07.jpeg" alt="Hrishabh Singh Photo" style="border-radius: 50%; width: 250px; height: 250px;">
+            <h3> Hrishabh Singh</h3>
+            <h3> B.Tech Student <br> PW IOI Lucknow Campus</h3>
+         </nav>
+         </div>
+         </section>
+        
+         <section class =info>
+         <div>
+         <nav>
+          <p>
+            I'm a B.Tech student at PW IOI Lucknow Campus with a passion for web development and technology. I love creating projects that make a difference and exploring new technologies to enhance my skills.
+            I'm developing strong foundations in computer science and engineering. Through my coursework and hands-on projects, I've gained experience in various programming languages and technologies.
+           <br>
+           <br>
+           I believe in learning by doing, which is why I focus on building practical projects that demonstrate the concepts I've learned in college. Each project represents a step forward in my journey as a developer.
+          </p>
+          <button class="about1">Problem solver</button>
+            <button  class="about2">Quick Learner</button>
+            <button  class="about3">Team Player</button>
+            <button  class="about4">Creative Thinker</button>
+            <button  class="about5">Adaptable</button>
+            <button  class="about6">Passionate</button>
+            <button  class="about7">Detail-Oriented</button>
+
+         </nav>
+            </div>
+        </section>
+        
+
+    </section>
+   
+            <article id=skills>
+
+            <h2>Technical Skills</h2>
+            </article>
+         <article class="technical-skills">
+            <div>
+                <p >Technologies I've learned and worked with</p>
+                <nav>
+                    <div>
+                    
+                    <ul>
+                        <h2>web development</h2>
+                        <li>HTML 
+                            <br>
+                            <progress value="90" max="100"></progress>
+                        </li>
+                        <li>CSS 
+                            <br>
+                            <progress value="85" max="100"></progress>
+
+                        </li>
+                        <li>JavaScript
+                            <br>
+                            <progress value="10" max="100"></progress>
+                        </li>
+                        </ul>
+                        </div>
+                        <div>
+                        <ul>
+                            <h2> Programming languages</h2>
+                        <li>Python
+                            <br>
+                            <progress value="0" max="100"></progress>
+                        </li>
+                        <li>Java
+                            <br>
+                            <progress value="0" max="100"></progress>
+                        </li>
+                        <li>C++
+                            <br>
+                            <progress value="0" max="100"></progress>
+                        </li>
+
+                        </ul>
+                        </div>
+                        <div>
+                        <ul>
+                            <h2>Other Skills</h2>
+                            <br>
+                            <br>
+                            <br>
+                        <li>Git & GitHub 
+                            <br>
+                            <progress value="70" max="100"></progress>
+                        </li>
+                        <li>Responsive Web Design
+                            <br>
+                            <progress value="80" max="100"></progress>
+                        </li>
+                       </ul>
+                          </div>
+                </nav>
+            </div>
+            </article>
+            <article id =projects>
+            <h2>My Projects</h2>
+            </article>
+    <section class="projects">
+        <div>
+        <Ul>
+            <H2> MY PROJECTS</H2>
+            
+           <li><a href="https://hrishabh1980.github.io/my-resume/"target="iframe" style="color: #474444;" >My-resume</a> </li> 
+           
+           <li> <a href="https://hrishabh1980.github.io/Rishiflix-./index3.html" target="iframe" style="color: #474444;"> Rishiflix-</a></li>
+
+           <li><a href="CLASS PROJECT.HTML" target="iframe" style="color: #474444;"> Landing  page</a></li>
+           <li><a href="https://hrishabh1980.github.io/class-project-27-sep/class2.html" target="iframe" style="color: #474444;"> top rated sneaker</a> </li>
+           <li> <a href="https://hrishabh1980.github.io/class-project-29-sept/index29.html"target="iframe"  style="color: #474444;">  Mens clothing </a></li>
+           <li> <a href="https://hrishabh1980.github.io/class-project-30-sept/"target="iframe" style="color: #474444;"> XClOTHES</a></li>
+           <li> <a href="./womens /index2.html"target="iframe" style="color: #474444;"> FASHION STORE</a></li>
+           <li> <a href="https://hrishabh1980.github.io/project-ioi-youtube-page-by-html/youtube.html"target="iframe" style="color: #474444;"> IOI YT page</a></li>
+        </Ul>
+        </div>
+        <div> <iframe name="iframe"></iframe>
+        </div>
+    </section>
+    <article id=contact>
+        <h2>Contact Me</h2>
+    </article>
+    <section class="contact-me">
+        <div>
+            <h3>Get In Touch</h3>
+            <p >Let's connect and discuss opportunities</p>
+         <nav>
+            <ul>
+                <li><i class="bi bi-envelope"></i>  email: hrishah1980@gmail.com</li>
+                
+                <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/hrishabh-singh-7387aa380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank" style="color: rgb(0, 0, 0);"> LinkedIn</a> </li>
+                <li><i class="bi bi-github"></i> <a href="https://github.com/Hrishabh1980" target="_blank" style="color: rgb(0, 0, 0);"> GitHub</a> </li>
+                
+                
+            </ul>
+           
+         </nav>  
+        </div> 
+        <form>
+            <div>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                
+                <button type="submit">Send Message</button>
+            </div>
+
+
+
+        </form>
+
+
+    </section>
+    <footer>
+    
+    <div>
+        
+        <h2>Hrishab Singh</h2>
+        <nav class="ME">
+                    <span>B.Tech Computer Science student passionate about creating innovative technological solutions.</span>
+        </nav>
+    </div>
+        <div >  <h2>Quick Links</h2>
+        <nav class="link">
+          
+                    <span><a href="#about" style="color: #0f0f0f; text-decoration: none;">About</a></span>
+                    <span><a href="#skills" style="color: #0e0f0f; text-decoration: none;">Skills</a></span>
+                    <span><a href="#projects" style="color: #000000; text-decoration: none;">Projects</a></span>
+                    <span><a href="#contact" style="color: #000000; text-decoration: none;">Contact</a></span>
+
+            
+        </nav></div>
+       <div> <h2> connect</h2><nav class="connect">
+        <span class="bi bi-github"> github</span><br> 
+         <span class="bi bi-instagram"> instagram</span><br>
+          <span class="bi bi-mailbox"> Mail</span><br>
+           <span class="bi bi-whatsapp"> whatsapp</span></nav><br>
+    </div>
+
+    <div class="footer-bottom">
+                <p>&copy; 2025 Hrishab Singh. All rights reserved. | Designed with HTML & CSS for my B.Tech journey</p>
+            </div>
+
+    
+   </footer>
+        
+        
+        
+
+    
+    
+</body>
+</html>
