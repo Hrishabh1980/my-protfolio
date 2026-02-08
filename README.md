@@ -26,4 +26,8 @@ VS Code
 Core Concepts
 Arrays & Functions (C)
 Loops & Logic Building
-Problem Solving
+Problem Solving.
+
+
+Fun Fact
+“I believe consistency beats talent when talent doesn’t practice.”
