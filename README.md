@@ -1,6 +1,8 @@
 
 👋 Hi, I’m Hrishabh Singh
 
+project link- https://hrishabh1980.github.io/my-protfolio/new%20portfolio.html
+
 🎓 Student | Aspiring Software Developer
 💻 Learning & building projects in C, Web Development, and Data Tools
 🚀 Passionate about problem-solving, clean code, and continuous learning.
