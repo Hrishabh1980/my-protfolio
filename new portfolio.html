@@ -410,6 +410,9 @@
             <li><a href="#skills" style="color: rgb(0, 0, 0);">Skills</a></li>
             <li><a href="#projects" style="color: rgb(9, 10, 10);">Projects</a></li>
              <li><a href="#contact" style="color: rgb(0, 0, 0);">Contact</a></li>
+                <li> <button class="btn btn-outline-light ms-3" onclick="toggleMode()">
+                <i class="fa fa-moon"></i>
+                </button></li>
                 </ul>
         
     </div>
@@ -509,7 +512,7 @@
                         </li>
                         <li>JavaScript
                             <br>
-                            <progress value="10" max="100"></progress>
+                            <progress value="50" max="100"></progress>
                         </li>
                         </ul>
                         </div>
@@ -522,7 +525,7 @@
                         </li>
                         <li>Java
                             <br>
-                            <progress value="0" max="100"></progress>
+                            <progress value="20" max="100"></progress>
                         </li>
                         <li>C++
                             <br>
@@ -647,6 +650,11 @@
 
     
    </footer>
+    <script>
+        function toggleMode(){
+document.body.classList.toggle("dark-mode");
+}
+    </script>
         
         
         
